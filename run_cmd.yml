@@ -3,4 +3,4 @@
   gather_facts: false
   tasks:
     - name: Run a command
-      shell: "whoami ; df -hP ; ls -al"
+      shell: "whoami ; ls -lR /usr"

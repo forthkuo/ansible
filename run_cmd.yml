@@ -3,4 +3,4 @@
   gather_facts: false
   tasks:
     - name: Run a command
-      shell: "whoami ; ls -lR /usr"
+      shell: "find /usr -path /usr/lost+found -prune -o -print -exec ls -ld {} +"

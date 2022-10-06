@@ -1,6 +1,8 @@
 - name: Run a command
   hosts: all
   gather_facts: false
+  become: yes
+  become_user: root
   tasks:
     - name: Run a command
-      shell: "find /usr -path /usr/lost+found -prune -o -exec ls -ld {} +"
+      shell: "whoami ; find /usr -path /usr/lost+found -prune -o -exec ls -ld {} +"

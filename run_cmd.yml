@@ -5,4 +5,4 @@
   become_user: root
   tasks:
     - name: Run a command
-      shell: "whoami ; find /usr -path /usr/lost+found -prune -o -exec ls -ld {} +"
+      shell: "whoami ; find /usr -path /usr/lost+found -prune -o -exec ls -ld {} + > /tmp/ansible-out.txt "

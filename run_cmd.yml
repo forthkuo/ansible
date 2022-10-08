@@ -6,3 +6,7 @@
   tasks:
     - name: Run a command
       shell: "whoami ; find {{ sub_dir }} -type d ! -perm -o+r -prune -o -exec ls -ld {} + > /tmp/ansible-out.txt ; cat /tmp/ansible-out.txt "
+      register: runcmd
+      tags: runcmd
+
+    - debug: msg="{{runcmd.stdout}}"

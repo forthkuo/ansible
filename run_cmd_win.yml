@@ -3,4 +3,4 @@
   gather_facts: false
   tasks:
     - name: Run a command
-      shell: "dir {{ sub_dir }}  /s"
+      command: "dir {{ sub_dir }}  /s"

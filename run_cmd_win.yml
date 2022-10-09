@@ -5,4 +5,4 @@
 #  become_user: admin
   tasks:
     - name: Windows - Run a command
-      win_command: whoami
+      win_shell: whoami

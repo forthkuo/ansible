@@ -1,1 +1,1 @@
-- win_shell: whoami
+- win_shell: dir c:\

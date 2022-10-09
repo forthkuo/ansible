@@ -1,5 +1,2 @@
-- name: Windows - Run a command
-  hosts: all
-  gather_facts: false
-- name: Windows - Run a command
+- name: Windows Run a command
   win_shell: whoami

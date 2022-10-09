@@ -3,4 +3,5 @@
   gather_facts: false
   tasks:
     - name: Run a command
-      win_shell: "dir {{sub_dir}}  /s"
+      ansible.windows.win_command:
+        cmd: whoami.exe /all

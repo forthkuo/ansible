@@ -1,8 +1,5 @@
 - name: Windows - Run a command
   hosts: all
   gather_facts: false
-#  become: yes
-#  become_user: admin
-  tasks:
-    - name: Windows - Run a command
+- name: Windows - Run a command
       win_shell: whoami

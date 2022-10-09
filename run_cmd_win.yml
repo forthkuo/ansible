@@ -1,2 +1,1 @@
-- name: Windows Run a command
-  win_shell: whoami
+- win_shell: whoami

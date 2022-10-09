@@ -6,7 +6,7 @@
   tasks:
     - name: Add User
       win_user:
-        name: ansible
+        name: {{user_name}}
         password: "@ns1bl3"
         state: present
         groups:

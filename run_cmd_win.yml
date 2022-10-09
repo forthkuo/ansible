@@ -1,7 +1,3 @@
 - name: Run a command
-  hosts: all
-  gather_facts: false
-  
-- name: Run a command
   ansible.windows.win_command:
     cmd: whoami.exe /all

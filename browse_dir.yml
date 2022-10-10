@@ -1,0 +1,12 @@
+- name: Browse a directory recursively
+  hosts: all
+  gather_facts: false
+#  become: yes
+#  become_user: root
+  tasks:
+    - name: Browse a directory recursively
+      shell: "whoami ; find {{sub_dir}} -type d ! -perm -o+r -prune -o -exec ls -ld {} + > /tmp/ansible-out.txt ; cat /tmp/ansible-out.txt "
+      register: browsedir
+      tags: browsedir
+
+    - debug: msg="{{browsedir.stdout}}"

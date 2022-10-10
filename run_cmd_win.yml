@@ -4,4 +4,4 @@
 
   tasks:
     - name: Windows - Run a command
-      win_shell: "dir {{sub_dir}}"
+      win_shell: "{{win_cmd}}"

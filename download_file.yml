@@ -1,5 +1,6 @@
 - name: Ansible Copy Example Local to Remote
   hosts: all
+  gather_facts: false
   tasks:
     - name: copying file with playbook
       copy:

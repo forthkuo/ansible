@@ -5,7 +5,7 @@
     - name: copying file with playbook
       copy:
         src: "{{source_file}}"
-        dest: /tmp
+        dest: "{{dest_dir}}"
         owner: ans
         group: ans       
         mode: 0644

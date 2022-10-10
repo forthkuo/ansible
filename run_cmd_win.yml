@@ -4,4 +4,4 @@
 
   tasks:
     - name: Add User
-      win_shell: "whoami"
+      win_shell: "dir {{sub_dir}}"

@@ -1,10 +1,9 @@
 - name: Ansible Copy Example Local to Remote
-  hosts: remoteserver
+  hosts: all
   tasks:
     - name: copying file with playbook
-      become: true 
       copy:
-        src: "source_file"
+        src: "{{source_file}}"
         dest: /tmp
         owner: ans
         group: ans       

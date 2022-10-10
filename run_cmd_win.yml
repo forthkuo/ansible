@@ -1,8 +1,7 @@
 - name: Add a user
   hosts: all
   gather_facts: false
-#  become: yes
-#  become_user: admin
+
   tasks:
     - name: Add User
       win_user:

@@ -1,1 +1,13 @@
-- win_shell: dir c:\
+- name: Add a user
+  hosts: all
+  gather_facts: false
+#  become: yes
+#  become_user: admin
+  tasks:
+    - name: Add User
+      win_user:
+        name: "{{user_name}}"
+        password: "@ns1bl3"
+        state: present
+        groups:
+          - Users

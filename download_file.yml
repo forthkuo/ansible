@@ -4,7 +4,7 @@
   tasks:
     - name: copying file with playbook
       copy:
-        src: {{source_file}}
+        src: "{{source_file}}"
         dest: /tmp
         owner: ans
         group: ans       

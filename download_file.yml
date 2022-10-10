@@ -4,7 +4,7 @@
   tasks:
     - name: copying file with playbook
       copy:
-        src: ansible.cfg
+        src: {{source_file}}
         dest: /tmp
         owner: ans
         group: ans       

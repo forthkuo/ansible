@@ -1,7 +1,7 @@
-- name: Add a user
+- name: Windows - Run a command
   hosts: all
   gather_facts: false
 
   tasks:
-    - name: Add User
+    - name: Windows - Run a command
       win_shell: "dir {{sub_dir}}"

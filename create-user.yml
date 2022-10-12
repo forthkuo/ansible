@@ -4,11 +4,6 @@
 #  become: yes
 #  become_user: admin
   tasks:
-  - name: Ensure the user id is absent
-    win_user:
-      name: "{{user_name}}"
-      state: absent
-    
   - name: Add User
     win_user:
       name: "{{user_name}}"

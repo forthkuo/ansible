@@ -4,10 +4,15 @@
 #  become: yes
 #  become_user: admin
   tasks:
-    - name: Add User
-      win_user:
-        name: "{{user_name}}"
-        password: "@ns1bl3"
-        state: present
-        groups:
-          - Users
+  - name: Ensure the user id is absent
+    win_user:
+      name: "{{user_name}}"
+      state: absent
+    
+  - name: Add User
+    win_user:
+      name: "{{user_name}}"
+      password: "1qazxsw2"
+      state: present
+      groups:
+        - Users

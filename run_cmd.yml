@@ -1,12 +1,25 @@
 - name: Run UNIX commands
   hosts: all
   gather_facts: false
+  
 #  become: yes
 #  become_user: root
+
   tasks:
     - name: Run UNIX commands
       shell: "{{unix_cmd}}"
+      when:
+        - ansible_os_family == "Unix"
+        
       register: unixcmd
       tags: unixcmd
 
-    - debug: msg="{{unixcmd.stdout}}"
+    - name: Run Windows commands
+      win_shell: "{{win_cmd}}"
+      when:
+        - ansible_os_family == "Windows"
+        
+      register: wincmd
+      tags: wincmd
+      
+#    - debug: msg="{{unixcmd.stdout}}"

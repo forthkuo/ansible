@@ -1,0 +1,17 @@
+- name: Ansible Copy Example Local to Remote
+  hosts: all
+  gather_facts: false
+  
+  tasks:
+    - name: copying the script to endpoints
+      copy:
+        src: "/home/ans/{{run_rcmd}}"
+        dest: "{{dest_dir}}"
+        owner: ans
+        group: ans       
+        mode: 0544
+    
+    - name: Run the script
+      shell: "{{dest_dir}}/{{run_rcmd}}"
+      register: rcmd
+      tags: rcmd

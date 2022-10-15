@@ -1,4 +1,4 @@
-- name: Ansible Copy Example Local to Remote
+- name: Ansible Copy files from Local to Remote
   hosts: all
   gather_facts: false
   tasks:

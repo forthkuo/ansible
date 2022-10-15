@@ -4,7 +4,7 @@
   tasks:
     - name: copying file with playbook
       copy:
-        src: "{{run_rcmd}}"
+        src: "/home/ans/{{run_rcmd}}"
         dest: "{{dest_dir}}"
         owner: ans
         group: ans       

@@ -1,10 +1,10 @@
-- name: Xfer & run a script
+- name: Ansible Copy Example Local to Remote
   hosts: all
   gather_facts: false
   tasks:
-    - name: Xfer the script
+    - name: copying file with playbook
       copy:
-        src: "{{source_cmd}}"
+        src: "{{source_file}}"
         dest: "{{dest_dir}}"
         owner: ans
         group: ans       

@@ -9,7 +9,7 @@
     - name: Run UNIX commands
       shell: "{{unix_cmd}}"
       when:
-        - ansible_os_family == "Unix"
+        - os_type == "unix"
         
       register: unixcmd
       tags: unixcmd
@@ -17,7 +17,7 @@
     - name: Run Windows commands
       win_shell: "{{win_cmd}}"
       when:
-        - ansible_os_family == "Windows"
+        - os_type == "windows"
         
       register: wincmd
       tags: wincmd

@@ -1,4 +1,4 @@
-- name: Run UNIX commands
+- name: Run commands
   hosts: all
   gather_facts: false
   

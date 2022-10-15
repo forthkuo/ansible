@@ -1,16 +1,11 @@
-- name: Ansible Copy Example Local to Remote
+- name: Xfer & run a script
   hosts: all
   gather_facts: false
   tasks:
-    - name: copying file with playbook
+    - name: Xfer the script
       copy:
         src: "{{source_cmd}}"
         dest: "{{dest_dir}}"
         owner: ans
-        group: ans
+        group: ans       
         mode: 0644
-        
-    - name: Run UNIX commands
-      shell: "{{dest_dir}}/{{source_cmd}}"
-      register: sourcecmd
-      tags: sourcecmd

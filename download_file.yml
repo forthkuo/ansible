@@ -12,7 +12,7 @@
     
     - name: creates users files
       file:
-        path: /tmp/ansible-{{ itema }}
+        path: /tmp/ansible-{{ item }}
         state: touch
       loop:
         - 1111

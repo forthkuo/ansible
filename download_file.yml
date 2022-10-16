@@ -9,3 +9,12 @@
         owner: ans
         group: ans       
         mode: 0644
+    
+    - name: creates users files
+      file:
+        path: /tmp/ansible-{{ item }}
+        state: touch
+      loop:
+        - 1111
+        - 2222
+        - 3333

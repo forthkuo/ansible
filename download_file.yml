@@ -9,12 +9,18 @@
         owner: ans
         group: ans       
         mode: 0644
-    
-    - name: creates users files
-      file:
-        path: /tmp/ansible-{{ item }}
-        state: touch
-      loop:
-        - 1111
-        - 2222
-        - 3333
+
+- name: Just ensuring the repo checkout exists
+  ansible.builtin.git:
+    repo: 'https://github.com/forthkuo/ansible/tree/main/files/config.txt'
+    dest: /srv/checkout
+    update: no
+
+#- name: creates users files
+#      file:
+#        path: /tmp/ansible-{{ item }}
+#        state: touch
+#      loop:
+#        - 1111
+#        - 2222
+#        - 3333

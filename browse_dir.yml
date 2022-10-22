@@ -5,7 +5,7 @@
 #  become_user: root
   tasks:
     - name: Browse a directory recursively
-      shel 
+      shell:
 #        "whoami ; find {{browse_dir}} -type d ! -perm -o+r -prune -o -exec ls -ld {} + > /tmp/ansible-out.txt ; cat /tmp/ansible-out.txt "
         "find {{browse_dir}} -name *.txt ! -perm -o+r -prune -o -exec cat {} +"
       register: browsedir

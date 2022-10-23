@@ -1,8 +1,9 @@
-- name Display variables
+- name: Browse a directory recursively
   hosts: all
   gather_facts: true
 #  become: yes
 #  become_user: root
-
   tasks:
-    msg: "{{ansible_os_family}}"
+    - name: Print out all Ansible environment variables
+      debug:
+        msg: "{{ansible_os_family}}"

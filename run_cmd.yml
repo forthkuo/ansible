@@ -22,4 +22,4 @@
       register: runcmd
       tags: runcmd
       
-#    - debug: msg="{{runcmd.stdout}}"
+    - debug: msg="{{runcmd.stdout}}"

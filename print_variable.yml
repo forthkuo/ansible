@@ -1,0 +1,8 @@
+- name Display variables
+  hosts: all
+  gather_facts: true
+#  become: yes
+#  become_user: root
+
+  tasks:
+    msg: "{{ansible_os_family}}"

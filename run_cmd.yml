@@ -7,19 +7,19 @@
 
   tasks:
     - name: Run UNIX commands
-      shell: "{{unix_cmd}}"
+      shell: "{{run_cmd}}"
       when:
         - ansible_os_family != "Windows"
         
-      register: unixcmd
-      tags: unixcmd
+      register: runcmd
+      tags: runcmd
 
     - name: Run Windows commands
-      win_shell: "{{win_cmd}}"
+      win_shell: "{{run_cmd}}"
       when:
         - ansible_os_family == "Windows"
         
-      register: wincmd
-      tags: wincmd
+      register: runcmd
+      tags: runcmd
       
-#    - debug: msg="{{unixcmd.stdout}}"
+#    - debug: msg="{{runcmd.stdout}}"

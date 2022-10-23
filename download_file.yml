@@ -10,11 +10,12 @@
         group: ans       
         mode: 0644
 
-- name: Just ensuring the repo checkout exists
-  ansible.builtin.git:
-    repo: 'https://github.com/forthkuo/ansible/tree/main/files/config.txt'
-    dest: /srv/checkout
-    update: no
+- name: Download file and force basic auth
+  ansible.builtin.get_url:
+    url: http://example.com/path/file.conf
+    dest: /etc/foo.conf
+    mode: 0555
+    force_basic_auth: yes
 
 #- name: creates users files
 #      file:

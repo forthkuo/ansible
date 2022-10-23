@@ -8,8 +8,8 @@
       shell:
         "echo {{ansible_env.PATH}} ; find {{browse_dir}} -type d ! -perm -o+r -prune -o -exec ls -ld {} + > /tmp/ansible-out.txt ; cat /tmp/ansible-out.txt "
  
-      register: browsedir
-      tags: browsedir
+#      register: browsedir
+#      tags: browsedir
 
-    - debug:
-        msg: "{{ browsedir }}"
+      debug:
+        msg: "{{ansible_env}}"

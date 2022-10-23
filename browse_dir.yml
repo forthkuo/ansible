@@ -11,5 +11,6 @@
 #      register: browsedir
 #      tags: browsedir
 
+    - name: Print out all Ansible environment variables
       debug:
         msg: "{{ansible_env}}"

@@ -11,4 +11,5 @@
       register: browsedir
       tags: browsedir
 
-    - debug: msg="{{browsedir.stdout}}"
+    - debug: 
+      msg: "{{ ansible_env }}"

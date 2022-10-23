@@ -13,6 +13,7 @@
     - name: Download file and force basic auth
       ansible.builtin.get_url:
         url: https://github.com/forthkuo/ansible/blob/main/files/config.txt
+        src: files/config.txt
         dest: "{{dest_dir}}"
         mode: 0555
 #        force_basic_auth: yes

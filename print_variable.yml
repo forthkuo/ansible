@@ -6,4 +6,4 @@
   tasks:
     - name: Print out all Ansible environment variables
       debug:
-        msg: "{{ansible_os_family}}"
+        msg: "{{os_family}}"
